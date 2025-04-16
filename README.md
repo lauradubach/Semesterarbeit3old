@@ -1,6 +1,6 @@
 # Semesterarbeit 3 | HF Cloud Native Engineer
 
-![Titelbild](Semesterarbeit3/Pictures/Titelbild.jpg)
+![Titelbild](Pictures/Titelbild.jpg)
 
 > Next [Page](https://github.com/lauradubach/Semesterarbeit3/blob/main/Sites/Teil%201%20Initialisierung.md)
 
@@ -15,7 +15,7 @@
 
 ## Autorin
 
-![Autorin](Semesterarbeit3/Pictures/Autorin.jpg)
+![Autorin](Pictures/Autorin.jpg)
 
 ---
 [Laura Joana Dubach](https://github.com/lauradubach)
