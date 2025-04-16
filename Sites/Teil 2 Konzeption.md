@@ -50,6 +50,6 @@
 
 
 
-> Back [Page]()
+> Back [Page](https://github.com/lauradubach/Semesterarbeit3/blob/main/Sites/Teil%202%20Konzeption.md)
 >
-> Next [Page]()
+> Next [Page](https://github.com/lauradubach/Semesterarbeit3/blob/main/Sites/Teil%201%20Initialisierung.md)

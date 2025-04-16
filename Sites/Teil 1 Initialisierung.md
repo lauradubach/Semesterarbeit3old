@@ -55,6 +55,6 @@
 ## Zwischengespräch 3
 ### Besprechungsnotiz
 
-> Back [Page]()
+> Back [Page](https://github.com/lauradubach/Semesterarbeit3/blob/main/README.md)
 >
-> Next [Page]()
+> Next [Page](https://github.com/lauradubach/Semesterarbeit3/blob/main/Sites/Teil%202%20Konzeption.md)
