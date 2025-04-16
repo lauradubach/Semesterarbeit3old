@@ -9,7 +9,7 @@
     - [Sachmittel](#sachmittel)
     - [Programmiersprache](#programmiersprache)
   - [Werkzeuge](#werkzeuge)
-  - [Methode](#methode)
+  - [SCRUM-Überblick](#scrum-überblick)
 - [Projektorganisation](#projektorganisation)
   - [Beteiligte Personen](#beteiligte-personen)
     - [Kanditatin](#kanditatin)
@@ -32,7 +32,13 @@
 ### Sachmittel
 ### Programmiersprache
 ## Werkzeuge
-## Methode
+## SCRUM-Überblick
+
+- Kurze Erklärung, wie SCRUM im Projekt genutzt wird
+
+- Rollenverteilung (wenn mehrere Personen beteiligt sind) -> Projektorganisation
+
+- Artefakte: Backlog, Sprints, Reviews etc.
 
 # Projektorganisation
 ## Beteiligte Personen

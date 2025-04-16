@@ -1,6 +1,6 @@
-# Teil 5 Abschluss
+# Teil 4 Abschluss
 
-- [Teil 5 Abschluss](#teil-5-abschluss)
+- [Teil 4 Abschluss](#teil-4-abschluss)
 - [Auswerten](#auswerten)
   - [Zusammenfassung](#zusammenfassung)
   - [Reflexion](#reflexion)
