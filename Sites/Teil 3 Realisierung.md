@@ -37,12 +37,39 @@
 
 ## Sprint 1
 ## Spint Planning
+
+- Aufteilung der Arbeit in Sprints
+
+- Product Backlog (evtl. als Anhang oder Auszug mit User Stories)
+
+- Sprintziele
+
 ## Spint Review
+
+- Kurze Reflexion je Sprint
+- Was lief gut, was kann verbessert werden?
 ## Sprint 2
 ## Spint Planning
+
+- Aufteilung der Arbeit in Sprints
+
+- Product Backlog (evtl. als Anhang oder Auszug mit User Stories)
+
+- Sprintziele
+
 ## Spint Review
+
+- Kurze Reflexion je Sprint
+- Was lief gut, was kann verbessert werden?
 ## Sprint 3
 ## Spint Planning
+
+- Aufteilung der Arbeit in Sprints
+
+- Product Backlog (evtl. als Anhang oder Auszug mit User Stories)
+
+- Sprintziele
+
 ## Spint Review
 
 - Kurze Reflexion je Sprint

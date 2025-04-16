@@ -16,7 +16,6 @@
     - [Testen](#testen)
     - [Präsentation](#präsentation)
     - [Abgabe](#abgabe)
-  - [Sprintplanung](#sprintplanung)
 - [Entscheiden](#entscheiden)
   - [Systemarchitektur](#systemarchitektur)
   - [Technologieentscheidungen](#technologieentscheidungen)
@@ -40,14 +39,6 @@
 ### Testen
 ### Präsentation
 ### Abgabe
-
-## Sprintplanung
-
-- Aufteilung der Arbeit in Sprints
-
-- Product Backlog (evtl. als Anhang oder Auszug mit User Stories)
-
-- Sprintziele
 
 # Entscheiden
 ## Systemarchitektur
