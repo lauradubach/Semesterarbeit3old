@@ -4,8 +4,14 @@
 - [Realisieren](#realisieren)
   - [Implementierungsplan](#implementierungsplan)
   - [Sprint 1](#sprint-1)
+  - [Spint Planning](#spint-planning)
+  - [Spint Review](#spint-review)
   - [Sprint 2](#sprint-2)
+  - [Spint Planning](#spint-planning-1)
+  - [Spint Review](#spint-review-1)
   - [Sprint 3](#sprint-3)
+  - [Spint Planning](#spint-planning-2)
+  - [Spint Review](#spint-review-2)
   - [Entwicklung](#entwicklung)
     - [Aufgetretene Probleme](#aufgetretene-probleme)
   - [Fallbacksolution](#fallbacksolution)
@@ -13,7 +19,6 @@
   - [Testing](#testing)
     - [Testkonzept](#testkonzept)
     - [Testdurchführung](#testdurchführung)
-  - [Sprint Review \& Retrospektive](#sprint-review--retrospektive)
 
 # Realisieren
 
@@ -31,8 +36,17 @@
 ## Implementierungsplan
 
 ## Sprint 1
+## Spint Planning
+## Spint Review
 ## Sprint 2
+## Spint Planning
+## Spint Review
 ## Sprint 3
+## Spint Planning
+## Spint Review
+
+- Kurze Reflexion je Sprint
+- Was lief gut, was kann verbessert werden?
 
 ## Entwicklung
 
@@ -56,10 +70,7 @@
 | Testfall | Erwartetes Ergebnis | Testresultat |
 | ---------| ------------------- | ------------ |
 
-## Sprint Review & Retrospektive
 
-- Kurze Reflexion je Sprint
-- Was lief gut, was kann verbessert werden?
 
 > Back [Page](https://github.com/lauradubach/Semesterarbeit3/blob/main/Sites/Teil%202%20Konzeption.md)
 >

@@ -3,23 +3,30 @@
 - [Teil 2 Konzeption](#teil-2-konzeption)
 - [Informieren](#informieren)
   - [Ausgangslage \& Motivation](#ausgangslage--motivation)
-  - [Warum dieses Thema?](#warum-dieses-thema)
+  - [Anforderungen erheben](#anforderungen-erheben)
   - [Relevanz und Nutzen eines Event-Finders](#relevanz-und-nutzen-eines-event-finders)
   - [Ist und Soll](#ist-und-soll)
   - [Seusag](#seusag)
 - [Planen](#planen)
   - [Zeitplan](#zeitplan)
   - [Meilensteine](#meilensteine)
+    - [Einreichungsformular](#einreichungsformular)
+    - [Entscheidungsmatrix](#entscheidungsmatrix)
+    - [Realisieren](#realisieren)
+    - [Testen](#testen)
+    - [Präsentation](#präsentation)
+    - [Abgabe](#abgabe)
   - [Sprintplanung](#sprintplanung)
 - [Entscheiden](#entscheiden)
   - [Systemarchitektur](#systemarchitektur)
   - [Technologieentscheidungen](#technologieentscheidungen)
   - [API-Auswahl](#api-auswahl)
+  - [Entscheidungsmatrix](#entscheidungsmatrix-1)
 
 
 # Informieren
 ## Ausgangslage & Motivation
-## Warum dieses Thema?
+## Anforderungen erheben
 ## Relevanz und Nutzen eines Event-Finders
 ## Ist und Soll
 ## Seusag
@@ -27,6 +34,13 @@
 # Planen
 ## Zeitplan
 ## Meilensteine
+### Einreichungsformular
+### Entscheidungsmatrix
+### Realisieren
+### Testen
+### Präsentation
+### Abgabe
+
 ## Sprintplanung
 
 - Aufteilung der Arbeit in Sprints
@@ -47,6 +61,8 @@
 
 ## API-Auswahl
 - Vergleich mehrerer Event-APIs und Entscheidung für eine
+
+## Entscheidungsmatrix
 
 
 
