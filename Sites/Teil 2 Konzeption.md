@@ -62,7 +62,6 @@ SCRUM ist ein agiles Rahmenwerk (Framework) für Projektmanagement, das vor alle
 ## Ausgangslage & Motivation
 ## Anforderungen erheben
 ## Relevanz und Nutzen eines Event-Finders
-## Ist und Soll
 ## Seusag
 
 # Planen
@@ -74,6 +73,8 @@ SCRUM ist ein agiles Rahmenwerk (Framework) für Projektmanagement, das vor alle
 ### Testen
 ### Präsentation
 ### Abgabe
+
+## Ist und Soll
 
 # Entscheiden
 ## Systemarchitektur

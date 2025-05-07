@@ -10,6 +10,7 @@
     - [Programmiersprache](#programmiersprache)
   - [Werkzeuge](#werkzeuge)
   - [SCRUM-Überblick](#scrum-überblick)
+  - [Defenition of Done](#defenition-of-done)
 - [Projektorganisation](#projektorganisation)
   - [Beteiligte Personen](#beteiligte-personen)
     - [Kanditatin](#kanditatin)
@@ -17,11 +18,23 @@
 - [Datensicherung](#datensicherung)
 - [Sprint Planning](#sprint-planning)
   - [Sprint 1 05.05 – 09.05 (5 Tage)](#sprint-1-0505--0905-5-tage)
-    - [Ziel: Projektvorbereitung, Architekturentscheidungen, Setup](#ziel-projektvorbereitung-architekturentscheidungen-setup)
+    - [Ziel: Projektvorbereitung, Architekturentscheidungen](#ziel-projektvorbereitung-architekturentscheidungen)
+    - [Priorisierung](#priorisierung)
+    - [Aufgabenverteilung](#aufgabenverteilung)
+    - [Nächste Schritte](#nächste-schritte)
   - [Sprint 2 10.05 – 09.06 (4 Wochen)](#sprint-2-1005--0906-4-wochen)
     - [Ziel: Umsetzung der Kernfunktionalitäten](#ziel-umsetzung-der-kernfunktionalitäten)
+    - [Priorisierung](#priorisierung-1)
+    - [Aufgabenverteilung](#aufgabenverteilung-1)
+    - [Nächste Schritte](#nächste-schritte-1)
   - [Sprint 3: 10.06 – 07.07 (4 Wochen)](#sprint-3-1006--0707-4-wochen)
     - [Ziel: Feinschliff, Absicherung, Präsentationsvorbereitung](#ziel-feinschliff-absicherung-präsentationsvorbereitung)
+      - [Woche 1–2 (10.06 – 24.06):](#woche-12-1006--2406)
+      - [Woche 3 (25.06 – 30.06):](#woche-3-2506--3006)
+      - [Woche 4 (01.07 – 07.07):](#woche-4-0107--0707)
+    - [Priorisierung](#priorisierung-2)
+    - [Aufgabenverteilung](#aufgabenverteilung-2)
+    - [Nächste Schritte](#nächste-schritte-2)
 - [Sprint Reviews](#sprint-reviews)
   - [Sprint Review 1](#sprint-review-1)
     - [Besprechungsnotiz](#besprechungsnotiz)
@@ -87,6 +100,8 @@ Die Herausforderung besteht darin, einen eigenständigen Microservice zu entwick
 
 Im Rahmen der Entwicklung des Microservices für personalisierte, ortsbezogene Event-Empfehlungen wird SCRUM als agiles Projektmanagement-Framework eingesetzt, um strukturierte Fortschritte zu ermöglichen. Das Projekt wird in mehrere Sprints unterteilt, in denen jeweils konkrete Teilziele wie zum Beispiel die Anbindung der externen Event-API, die Entwicklung der Filterlogik oder die Integration der REST-API fokussiert bearbeitet werden. Zu Beginn jedes Sprints erfolgt eine Sprintplanung, in der die anstehenden Aufgaben priorisiert und aufgeteilt werden. Nach jedem Sprint wird ein Review durchgeführt. Durch den Einsatz von SCRUM bleibt man flexibel und kann trotz der technischen Komplexität effektiv auf Veränderungen und Herausforderungen reagieren.
 
+## Defenition of Done
+
 # Projektorganisation
 
 ## Beteiligte Personen
@@ -134,39 +149,118 @@ Sprint-Nummer: Sprint 1
 Datum: 05.05.2025
 Teilnehmer: Laura Dubach
 
-### Ziel: Projektvorbereitung, Architekturentscheidungen, Setup
+### Ziel: Projektvorbereitung, Architekturentscheidungen
 
-- Kickoff & Zieldefinition
-- Repository einrichten
-- Auswahl von Technologien
-- Grundstruktur des Microservices aufsetzen
-- Recherche & erste Tests zur externen Event-API
-- Docker-Grundkonfiguration
-- Sprint Review & Retrospektive: Projektstruktur und technisches Setup stehen
+1. Projektstruktur & Tools vorbereiten
+  - Git-Repository einrichten
+  - Ordnerstruktur, Linter, README
+  - Auswahl: Programmiersprache, Framework
+
+2. Event-API Recherche & Anbindung vorbereiten
+  - Recherche zu verfügbaren Event-APIs (z. B. Ticketmaster, Eventbrite, Songkick)
+  - API-Key beantragen
+  - Testaufrufe mit Tools wie Postman oder cURL durchführen
+
+3. Microservice-Design planen
+  - REST-Endpunkte festlegen (z. B. /events, /filter)
+  - Grobe Klassendiagramme/Modellierung
+  - Wahl einer Datenbank (z. B. PostgreSQL, MongoDB)
+
+### Priorisierung
+
+1. Priorität
+2. Priorität
+3. Priorität
+
+### Aufgabenverteilung
+
+Alle Aufgaben werden von Laura Dubach umgesetzt.
+
+### Nächste Schritte
+
+- Sprintreview findet am: 09.05.2025 statt
 
 ## Sprint 2 10.05 – 09.06 (4 Wochen)
 
 ### Ziel: Umsetzung der Kernfunktionalitäten
 
-- Anbindung der externen Event-API
-- Entwicklung der REST-API-Endpunkte
-- Implementierung der Filterlogik 
-- Datenbankintegration für Nutzerinformationen
-- Erste Tests
-- Einrichtung einer funktionierenden AWS-Deployment-Pipeline
-- Sprint Review & Retrospektive: Prototyp mit funktionalen Hauptfeatures
+Woche 1–2 (10.05 – 24.05):
+
+1. REST-API + Event-API + Filterlogik
+  - REST-API implementieren (`GET /events`, `GET /events?genre=rock`)
+  - Daten aus externer Event-API abrufen und verarbeiten
+  - Filterfunktionen integrieren:
+    - Ort (z. B. Städte)
+    - Datum (Zeitraum)
+    - Musikgenre
+  - Unit-Tests für Endpunkte und Filterlogik schreiben
+
+Woche 3 (25.05 – 31.05):
+
+2. Datenbankanbindung + Nutzerstruktur
+   - Datenbank einrichten & anbinden (Docker-Container oder lokal)
+   - Nutzer-Modell erstellen (z. B. Name, Standort, Interessen)
+   - Erste einfache Speicherung implementieren (z. B. Favoriten, Suchhistorie)
+
+Woche 4 (01.06 – 09.06):
+
+3. Containerisierung & erste Bereitstellung
+  - Dockerfile erstellen (für App und Datenbank)
+  - Docker-Compose zur lokalen Orchestrierung
+  - Pipeline (CI/CD) für automatisierten Build & Push vorbereiten
+  - Erstes Deployment über AWS (z. B. ECS, EC2, Elastic Beanstalk)
+
+### Priorisierung
+
+1. Priorität
+2. Priorität
+3. Priorität
+
+### Aufgabenverteilung
+
+Alle Aufgaben werden von Laura Dubach umgesetzt.
+
+### Nächste Schritte
+
+- Sprintreview findet am: statt
 
 ## Sprint 3: 10.06 – 07.07 (4 Wochen)
 
 ### Ziel: Feinschliff, Absicherung, Präsentationsvorbereitung
 
-- Erweiterte Filter und Performanceoptimierung
-- API-Sicherheit (z. B. Validierung, Authentifizierung)
-- Finalisierung der Docker-Container
-- Absicherung des Deployments auf AWS
-- Abschluss der technischen Dokumentation (API, Setup, Nutzung)
-- Vorbereitung der Abgabe/Präsentation
-- Sprint Review & Retrospektive: Fertiger, dokumentierter, lauffähiger Service
+#### Woche 1–2 (10.06 – 24.06):
+
+1. Feinschliff & Erweiterung
+  - API absichern (z. B. API Key, Rate Limiting, CORS-Konfiguration)
+  - Weitere Filteroptionen
+
+#### Woche 3 (25.06 – 30.06):
+
+1. Stabilisierung & Test
+  - Integrationstests & End-to-End Tests
+  - Fehlerbehandlung
+
+#### Woche 4 (01.07 – 07.07):
+
+3. Abschluss & Abgabevorbereitung
+  - Technische Dokumentation
+  - Fertigstellen Dokumentation
+  - Optional: Demo-Frontend oder Swagger-Dokumentation
+  - Präsentationsvorbereitung
+
+### Priorisierung
+
+1. Priorität
+2. Priorität
+3. Priorität
+
+### Aufgabenverteilung
+
+Alle Aufgaben werden von Laura Dubach umgesetzt.
+
+### Nächste Schritte
+
+- Sprintreview findet am: statt
 
 # Sprint Reviews
 
@@ -174,6 +268,7 @@ Teilnehmer: Laura Dubach
 
 | Besprechung | Datum | Uhrzeit | Teilnehmer | 
 | ---- | ---- | ---- | ---- |
+| 1 | 09.05.2025| 19:30 | Corrado Parisi, Laura Dubach |
 
 1. Erreichte Sprintziel
 2. Fertige Items
@@ -186,6 +281,7 @@ Teilnehmer: Laura Dubach
 
 | Besprechung | Datum | Uhrzeit | Teilnehmer | 
 | ---- | ---- | ---- | ---- |
+| 2 | 02.06.2025 | | Corrado Parisi, Laura Dubach |
 
 1. Erreichte Sprintziel
 2. Fertige Items
@@ -198,6 +294,7 @@ Teilnehmer: Laura Dubach
 
 | Besprechung | Datum | Uhrzeit | Teilnehmer | 
 | ---- | ---- | ---- | ---- |
+| 2 | 20.06.2025 | | Corrado Parisi, Laura Dubach |
 
 1. Erreichte Sprintziel
 2. Fertige Items
