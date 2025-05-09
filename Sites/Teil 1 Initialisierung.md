@@ -27,19 +27,17 @@ In diesem Kapitel wird ins Thema der Arbeit eingeführt. Es beschreibt den Hinte
 - [Sprint Planning](#sprint-planning)
   - [Sprint 1, 05.05 – 09.05 (5 Tage)](#sprint-1-0505--0905-5-tage)
     - [Aufgaben](#aufgaben)
-    - [Priorisierung](#priorisierung)
     - [Aufgabenverteilung](#aufgabenverteilung)
     - [Nächste Schritte](#nächste-schritte)
   - [Sprint 2 10.05 – 26.05 (16 Tage)](#sprint-2-1005--2605-16-tage)
-    - [Priorisierung](#priorisierung-1)
     - [Aufgabenverteilung](#aufgabenverteilung-1)
     - [Nächste Schritte](#nächste-schritte-1)
   - [Sprint 3: 27.05 – 23.06 (28 Tage)](#sprint-3-2705--2306-28-tage)
-    - [Priorisierung](#priorisierung-2)
+    - [Priorisierung](#priorisierung)
     - [Aufgabenverteilung](#aufgabenverteilung-2)
     - [Nächste Schritte](#nächste-schritte-2)
   - [Sprint 4: 24.06 – 09.07 (16 Tage)](#sprint-4-2406--0907-16-tage)
-    - [Priorisierung](#priorisierung-3)
+    - [Priorisierung](#priorisierung-1)
     - [Aufgabenverteilung](#aufgabenverteilung-3)
     - [Nächste Schritte](#nächste-schritte-3)
 - [Sprint Reviews](#sprint-reviews)
@@ -196,12 +194,6 @@ Entwicklung eines Microservices für Event-Empfehlungen
 
 ![Sprint1](../Pictures/Sprint1.png)
 
-### Priorisierung
-
-1. Priorität
-2. Priorität
-3. Priorität
-
 ### Aufgabenverteilung
 
 Alle Aufgaben werden von Laura Dubach umgesetzt.
@@ -215,12 +207,6 @@ Alle Aufgaben werden von Laura Dubach umgesetzt.
 > Ziel: Fachliches und technisches Konzept erstellen, Architekturentscheidungen treffen und Planung abschließen.
 
 ![Sprint2](../Pictures/Sprint2.png)
-
-### Priorisierung
-
-1. Priorität
-2. Priorität
-3. Priorität
 
 ### Aufgabenverteilung
 
@@ -284,6 +270,23 @@ Alle Aufgaben werden von Laura Dubach umgesetzt.
 4. Neue Erkenntnisse
 
 ### Besprechungsnotiz
+
+Corrado und ich haben uns über eine Teamviewer session getroffen.
+
+Folgende Fragen habe ich vorbereitet.
+
+1. Reicht es in den Acceptance Criteria nur den Punkt zu definieren oder wird ein ganzer Satz benötigt? 
+2. Wo soll das Sprintplanning im dokument am besten hinterlegt werden? 
+3. Darf ich die Struktur so belassen? Für mich ist es einfacher so zu arbeiten, als alles in einem Dokument zu haben.
+4. Darf ich ChatGPT verwenden um texte zu schreiben usw, mit Quellenangabe natürlich?
+
+Er meinte das ich schon gut vorbereitet set. So wie ich die User Story`s und Acceptance Criteria geschrieben habe passt es. Für das Sprintplanning kann ich am besten einen Ordner in meinem Repo anlegen, damlich ist und man es direkt findet. Die Struktur ist gut, bei der Abgabe soll jedoch ein ganzes Dokument abgegeben werden oder mit Github Pages das ganze gelöst werden. ChatGPT darf ich verwenden solange ich die Quellen hinterlegt habe. So wie ich dies bis jetzt schon umgesetzt habe.
+
+Er hatte noch ein paar Ideen die ich umsetzten kann:
+1. Risikomatrix
+2. Eine kurze reflexion im sprint review (wie ist es gelaufen, was könnte besser laufe)
+
+Das Gespräch verlauf super. All meine Fragen konnten beantwortet werden und Corrado konnte mir gute Tipps geben. Nun kann ich weiterarbeiten.
 
 ## Sprint Review 2
 
