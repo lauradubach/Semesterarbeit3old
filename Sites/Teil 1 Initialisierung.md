@@ -24,31 +24,6 @@ In diesem Kapitel wird ins Thema der Arbeit eingeführt. Es beschreibt den Hinte
     - [Kanditatin](#kanditatin)
     - [Dozenten](#dozenten)
 - [Datensicherung](#datensicherung)
-- [Sprint Planning](#sprint-planning)
-  - [Sprint 1, 05.05 – 09.05 (5 Tage)](#sprint-1-0505--0905-5-tage)
-    - [Aufgaben](#aufgaben)
-    - [Aufgabenverteilung](#aufgabenverteilung)
-    - [Nächste Schritte](#nächste-schritte)
-  - [Sprint 2 10.05 – 26.05 (16 Tage)](#sprint-2-1005--2605-16-tage)
-    - [Aufgabenverteilung](#aufgabenverteilung-1)
-    - [Nächste Schritte](#nächste-schritte-1)
-  - [Sprint 3: 27.05 – 23.06 (28 Tage)](#sprint-3-2705--2306-28-tage)
-    - [Priorisierung](#priorisierung)
-    - [Aufgabenverteilung](#aufgabenverteilung-2)
-    - [Nächste Schritte](#nächste-schritte-2)
-  - [Sprint 4: 24.06 – 09.07 (16 Tage)](#sprint-4-2406--0907-16-tage)
-    - [Priorisierung](#priorisierung-1)
-    - [Aufgabenverteilung](#aufgabenverteilung-3)
-    - [Nächste Schritte](#nächste-schritte-3)
-- [Sprint Reviews](#sprint-reviews)
-  - [Sprint Review 1](#sprint-review-1)
-    - [Besprechungsnotiz](#besprechungsnotiz)
-  - [Sprint Review 2](#sprint-review-2)
-    - [Besprechungsnotiz](#besprechungsnotiz-1)
-  - [Sprint Review 3](#sprint-review-3)
-    - [Besprechungsnotiz](#besprechungsnotiz-2)
-  - [Sprint Review 4](#sprint-review-4)
-    - [Besprechungsnotiz](#besprechungsnotiz-3)
 
 # Versionenverzeichniss
 
@@ -56,8 +31,9 @@ In diesem Kapitel wird ins Thema der Arbeit eingeführt. Es beschreibt den Hinte
 | ------- | ------ | ----  | --------- |
 | 1.0 | 05.05.2025 | Laura Dubach | Repo, Struktur, Notion erstellen |
 | 1.1 | 06.05.2025 | Laura Dubach | Jira Zeitplan starten & Sprint Planning beginnen |
-| 1.1 | 07.05.2025 | Laura Dubach | Jira Zeitplan& Sprint Planning fertigstellen, DoD erstellen |
+| 1.1 | 07.05.2025 | Laura Dubach | Jira Zeitplan & Sprint Planning fertigstellen, DoD erstellen |
 | 1.2 | 08.05.2025 | Laura Dubach | Thema Initialierung schreiben |
+| 1.3 | 09.05.2025 | Laura Dubach | Sprint Review schreiben |
 
 # Aufgabenstellung
 
@@ -144,7 +120,6 @@ Ein Product Backlog Item, gilt als "Done", wenn **alle** folgenden Kriterien erf
 - Die Reflexion ist verständlich.
 - Die Funktionalität ist im Product Backlog als „Done“ markiert.
 
-
 # Projektorganisation
 
 ## Beteiligte Personen
@@ -178,154 +153,6 @@ E-Mail: boris.langer@tbz.ch
 
 Damit keine Daten verloren gehen, werde ich alle Dokumente auf meinem OneDrive abspeichern. Zusätzlich werde ich die Daten auf einen USB-Stick abspeichern, damit ich im Worstcase Szenario ein Backup besitze.
 
-# Sprint Planning
-
-Entwicklung eines Microservices für Event-Empfehlungen
-
-**Zeitraum:** 05.05.2025 – 09.07.2025  
-**Methode:** SCRUM  
-**Anzahl Sprints:** 4 (Sprint 1 verkürzt)
-
-## Sprint 1, 05.05 – 09.05 (5 Tage)
-
-> Ziel: Das Projekt offiziell starten, die organisatorische Basis schaffen und erste technische Recherchen zur Event-API durchführen.
-
-### Aufgaben
-
-![Sprint1](../Pictures/Sprint1.png)
-
-### Aufgabenverteilung
-
-Alle Aufgaben werden von Laura Dubach umgesetzt.
-
-### Nächste Schritte
-
-- Sprintreview findet am: 09.05.2025 statt
-
-## Sprint 2 10.05 – 26.05 (16 Tage)
-
-> Ziel: Fachliches und technisches Konzept erstellen, Architekturentscheidungen treffen und Planung abschließen.
-
-![Sprint2](../Pictures/Sprint2.png)
-
-### Aufgabenverteilung
-
-Alle Aufgaben werden von Laura Dubach umgesetzt.
-
-### Nächste Schritte
-
-- Sprintreview findet am: 02.06 statt
-
-## Sprint 3: 27.05 – 23.06 (28 Tage)
-
-> Ziel: Kernfunktionalität umsetzen: APIs, Datenbank, Containerisierung, sowie erste automatisierte Bereitstellung über AWS.
-
-![Sprint3](../Pictures/Sprint3.png)
-
-### Priorisierung
-
-1. Priorität
-2. Priorität
-3. Priorität
-
-### Aufgabenverteilung
-
-Alle Aufgaben werden von Laura Dubach umgesetzt.
-
-### Nächste Schritte
-
-- Sprintreview findet am: 20.06 statt
-
-## Sprint 4: 24.06 – 09.07 (16 Tage)
-
-> Ziel: Feinschliff, Absicherung durch Tests, Dokumentation und finale Abgabe.
-
-![Sprint4](../Pictures/Sprint4.png)
-
-### Priorisierung
-
-1. Priorität
-2. Priorität
-3. Priorität
-
-### Aufgabenverteilung
-
-Alle Aufgaben werden von Laura Dubach umgesetzt.
-
-### Nächste Schritte
-
-- Sprintreview findet am: 20.06 statt
-
-# Sprint Reviews
-
-## Sprint Review 1
-
-| Besprechung | Datum | Uhrzeit | Teilnehmer | 
-| ---- | ---- | ---- | ---- |
-| 1 | 09.05.2025| 19:30 | Corrado Parisi, Laura Dubach |
-
-1. Erreichte Sprintziel
-2. Fertige Items
-3. Feedback
-4. Neue Erkenntnisse
-
-### Besprechungsnotiz
-
-Corrado und ich haben uns über eine Teamviewer session getroffen.
-
-Folgende Fragen habe ich vorbereitet.
-
-1. Reicht es in den Acceptance Criteria nur den Punkt zu definieren oder wird ein ganzer Satz benötigt? 
-2. Wo soll das Sprintplanning im dokument am besten hinterlegt werden? 
-3. Darf ich die Struktur so belassen? Für mich ist es einfacher so zu arbeiten, als alles in einem Dokument zu haben.
-4. Darf ich ChatGPT verwenden um texte zu schreiben usw, mit Quellenangabe natürlich?
-
-Er meinte das ich schon gut vorbereitet set. So wie ich die User Story`s und Acceptance Criteria geschrieben habe passt es. Für das Sprintplanning kann ich am besten einen Ordner in meinem Repo anlegen, damlich ist und man es direkt findet. Die Struktur ist gut, bei der Abgabe soll jedoch ein ganzes Dokument abgegeben werden oder mit Github Pages das ganze gelöst werden. ChatGPT darf ich verwenden solange ich die Quellen hinterlegt habe. So wie ich dies bis jetzt schon umgesetzt habe.
-
-Er hatte noch ein paar Ideen die ich umsetzten kann:
-1. Risikomatrix
-2. Eine kurze reflexion im sprint review (wie ist es gelaufen, was könnte besser laufe)
-
-Das Gespräch verlauf super. All meine Fragen konnten beantwortet werden und Corrado konnte mir gute Tipps geben. Nun kann ich weiterarbeiten.
-
-## Sprint Review 2
-
-| Besprechung | Datum | Uhrzeit | Teilnehmer | 
-| ---- | ---- | ---- | ---- |
-| 2 | 02.06.2025 | 18:45 | Corrado Parisi, Laura Dubach |
-
-1. Erreichte Sprintziel
-2. Fertige Items
-3. Feedback
-4. Neue Erkenntnisse
-
-### Besprechungsnotiz
-
-## Sprint Review 3
-
-| Besprechung | Datum | Uhrzeit | Teilnehmer | 
-| ---- | ---- | ---- | ---- |
-| 3 | 20.06.2025 | 18:00 | Corrado Parisi, Laura Dubach |
-
-1. Erreichte Sprintziel
-2. Fertige Items
-3. Feedback
-4. Neue Erkenntnisse
-
-### Besprechungsnotiz
-
-## Sprint Review 4
-
-| Besprechung | Datum | Uhrzeit | Teilnehmer | 
-| ---- | ---- | ---- | ---- |
-| 4 | 07.07.2025 | | Corrado Parisi, Laura Dubach |
-
-1. Erreichte Sprintziel
-2. Fertige Items
-3. Feedback
-4. Neue Erkenntnisse
-
-### Besprechungsnotiz
 
 > Back [Page](https://github.com/lauradubach/Semesterarbeit3/blob/main/README.md)
 >
