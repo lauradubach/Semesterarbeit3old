@@ -14,6 +14,9 @@ Nun gehen wir ins Thema Konzeption über. In diesem Kapitel wird das ganze Proje
   - [Anforderungen erheben](#anforderungen-erheben)
   - [Relevanz und Nutzen eines Event-Finders](#relevanz-und-nutzen-eines-event-finders)
   - [Seusag](#seusag)
+    - [Technologische Systemgrenzen](#technologische-systemgrenzen)
+    - [Funktionale Systemgrenzen](#funktionale-systemgrenzen)
+    - [Organisatorische Systemgrenzen](#organisatorische-systemgrenzen)
 - [Planen](#planen)
   - [Zeitplan](#zeitplan)
   - [Meilensteine](#meilensteine)
@@ -66,6 +69,16 @@ SCRUM ist ein agiles Rahmenwerk (Framework) für Projektmanagement, das vor alle
 
 ### Wieso SCRUM
 
+Ich habe mich bewusst für SCRUM als Vorgehensmodell entschieden, weil es ein etabliertes, agiles Framework ist. SCRUM ermöglicht es, in kurzen Zyklen (Sprints) kontinuierlich funktionsfähige Ergebnisse zu liefern, die regelmäßig überprüft und angepasst werden können.
+
+Durch die klare Struktur, regelmäßigen Events (Sprint Planning, Sprint Review, Retrospektive) und einem fokussierten Backlog-Management entsteht ein hohes Maß an Transparenz, Planbarkeit und Flexibilität.
+
+Ein weiterer entscheidender Vorteil von SCRUM ist die enge Einbindung von Feedback. So kann frühzeitig auf Veränderungen oder neue Erkenntnisse reagiert werden, ohne die gesamte Projektplanung überarbeiten zu müssen. Das fördert eine nutzerzentrierte Entwicklung und reduziert das Risiko, am Bedarf vorbei zu arbeiten.
+
+Zusätzlich haben wir im Unterricht SCRUM Theoretisch angeschaut und nun kann ich es Praktisch lernen umzusetzten.
+
+> (Chat GPT) [Quelle](https://chatgpt.com/share/68230b9b-2d9c-800e-a1eb-64bd9fe8ed96)
+
 
 ## Ausgangslage & Motivation
 
@@ -100,6 +113,29 @@ Der Einsatz moderner Technologien wie Docker, REST-APIs und Cloud-Deployment sor
 > (Chat GPT) [Quelle](https://chatgpt.com/share/681ca14f-3adc-800e-999e-442e39898a6b)
 
 ## Seusag
+
+### Technologische Systemgrenzen
+
+- Technologie-Stack begrenzt auf: REST, Docker, externe Event-APIs, relationale Datenbank (z. B. PostgreSQL), AWS (z. B. EC2 oder Elastic Beanstalk)
+- Externe API als Blackbox: Daten werden konsumiert, nicht beeinflusst oder erweitert
+- Eingeschränkte Sicherheit: Fokus auf Basis-Authentifizierung/API-Key; keine komplexen Authentifizierungsmechanismen
+- Kein Machine Learning: Empfehlungslogik basiert auf Filtern, nicht auf Nutzerdatenanalyse oder KI
+
+### Funktionale Systemgrenzen
+
+- Event-Typen eingeschränkt: Nur Musikveranstaltungen, keine Sport- oder Kultur-Events
+- Benutzerverwaltung: Speicherung einfacher Präferenzen, keine Registrierung/Login oder Rollenverwaltung
+- Filterfunktionen beschränkt: Standort (Stadt/Koordinaten), Datum, Genre
+- Keine Echtzeitverarbeitung: Daten werden bei Bedarf oder zeitgesteuert aktualisiert
+- Kein Rollen- oder Rechtekonzept: Service richtet sich an Einzelpersonen, nicht an Organisationen
+
+### Organisatorische Systemgrenzen
+
+- Einzelentwicklungsprojekt: Keine Teamarbeit, begrenzte Ressourcen
+- Verwendung bestehender APIs/Tools: Keine Eigenentwicklung von Eventdatenquellen oder Infrastrukturdiensten
+- Zeitlich klar begrenzt: Umsetzung innerhalb eines vorgegebenen Projektzeitraums
+- Keine produktive Veröffentlichung: Nur Demo-Zwecke, keine dauerhafte Verfügbarkeit oder Benutzerbasis
+- Support ausgeschlossen: Bereitstellung und Dokumentation ja, aber kein fortlaufender Betrieb oder Support
 
 # Planen
 
@@ -163,7 +199,6 @@ Auf Basis dieser Analyse fiel die Entscheidung zugunsten der Ticketmaster API, d
 > (Chat GPT) [Quelle](https://chatgpt.com/share/681cb603-08cc-800e-aab1-fdd14d015179)
 
 ## Entscheidungsmatrix
-
 
 
 > Back [Page](https://github.com/lauradubach/Semesterarbeit3/blob/main/Sites/Teil%202%20Konzeption.md)
