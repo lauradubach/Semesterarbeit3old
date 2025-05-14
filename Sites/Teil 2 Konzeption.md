@@ -14,9 +14,23 @@ Nun gehen wir ins Thema Konzeption über. In diesem Kapitel wird das ganze Proje
   - [Anforderungen erheben](#anforderungen-erheben)
   - [Relevanz und Nutzen eines Event-Finders](#relevanz-und-nutzen-eines-event-finders)
   - [Seusag](#seusag)
-    - [Technologische Systemgrenzen](#technologische-systemgrenzen)
-    - [Funktionale Systemgrenzen](#funktionale-systemgrenzen)
-    - [Organisatorische Systemgrenzen](#organisatorische-systemgrenzen)
+    - [Enthaltene (Included) Elemente](#enthaltene-included-elemente)
+      - [Userinterface](#userinterface)
+      - [Flask](#flask)
+      - [Datenbank](#datenbank)
+      - [SQLAlchemy](#sqlalchemy)
+      - [Docker](#docker)
+      - [Git](#git)
+      - [EC2 (AWS)](#ec2-aws)
+      - [Ticketmaster API](#ticketmaster-api)
+    - [Komponenten (Component)](#komponenten-component)
+      - [Pipeline](#pipeline)
+    - [Ausgeschlossene (Excluded) Elemente](#ausgeschlossene-excluded-elemente)
+      - [Echtzeitverarbeitung](#echtzeitverarbeitung)
+      - [Rechtekonzept](#rechtekonzept)
+      - [Produktive Veröffentlichung](#produktive-veröffentlichung)
+      - [Support](#support)
+      - [Eigenentwicklung von Eventdaten](#eigenentwicklung-von-eventdaten)
 - [Planen](#planen)
   - [Zeitplan](#zeitplan)
   - [Meilensteine](#meilensteine)
@@ -114,28 +128,56 @@ Der Einsatz moderner Technologien wie Docker, REST-APIs und Cloud-Deployment sor
 
 ## Seusag
 
-### Technologische Systemgrenzen
+![SEUSAG](../Pictures/SEUSAG.png)
 
-- Technologie-Stack begrenzt auf: REST, Docker, externe Event-APIs, relationale Datenbank (z. B. PostgreSQL), AWS (z. B. EC2 oder Elastic Beanstalk)
-- Externe API als Blackbox: Daten werden konsumiert, nicht beeinflusst oder erweitert
-- Eingeschränkte Sicherheit: Fokus auf Basis-Authentifizierung/API-Key; keine komplexen Authentifizierungsmechanismen
-- Kein Machine Learning: Empfehlungslogik basiert auf Filtern, nicht auf Nutzerdatenanalyse oder KI
+### Enthaltene (Included) Elemente
 
-### Funktionale Systemgrenzen
+#### Userinterface
+Das optionale User Interface dient zur Visualisierung oder Testung der API-Endpunkte. Es kann z. B. als einfache Web-Oberfläche fungieren, die Suchparameter (Ort, Genre, Datum) an das Backend weitergibt.
 
-- Event-Typen eingeschränkt: Nur Musikveranstaltungen, keine Sport- oder Kultur-Events
-- Benutzerverwaltung: Speicherung einfacher Präferenzen, keine Registrierung/Login oder Rollenverwaltung
-- Filterfunktionen beschränkt: Standort (Stadt/Koordinaten), Datum, Genre
-- Keine Echtzeitverarbeitung: Daten werden bei Bedarf oder zeitgesteuert aktualisiert
-- Kein Rollen- oder Rechtekonzept: Service richtet sich an Einzelpersonen, nicht an Organisationen
+#### Flask
+Das Backend-Framework bildet das zentrale Element des Microservices. Es implementiert die REST-API, verarbeitet Anfragen, leitet sie an die Filterlogik weiter und koordiniert alle internen Prozesse.
 
-### Organisatorische Systemgrenzen
+#### Datenbank
+Hier werden Benutzerinformationen, z. B. Präferenzen oder Filtereinstellungen, gespeichert. Eine relationale Datenbank (z. B. PostgreSQL) ist über ein ORM wie SQLAlchemy angebunden.
 
-- Einzelentwicklungsprojekt: Keine Teamarbeit, begrenzte Ressourcen
-- Verwendung bestehender APIs/Tools: Keine Eigenentwicklung von Eventdatenquellen oder Infrastrukturdiensten
-- Zeitlich klar begrenzt: Umsetzung innerhalb eines vorgegebenen Projektzeitraums
-- Keine produktive Veröffentlichung: Nur Demo-Zwecke, keine dauerhafte Verfügbarkeit oder Benutzerbasis
-- Support ausgeschlossen: Bereitstellung und Dokumentation ja, aber kein fortlaufender Betrieb oder Support
+#### SQLAlchemy
+Das ORM-Tool vermittelt zwischen Python (Flask) und der relationalen Datenbank. Es ermöglicht eine objektorientierte Datenbankanbindung und erleichtert Datenmanipulation und -abfragen.
+
+#### Docker
+Zur Containerisierung des Services wird Docker eingesetzt. Damit ist der Microservice unabhängig von der Umgebung lauffähig, z. B. lokal oder in der Cloud (AWS EC2).
+
+#### Git
+Der Code wird versionsverwaltet mit Git. Dies ermöglicht saubere Entwicklungsprozesse, Branching und Pull Requests.
+
+#### EC2 (AWS)
+Der Microservice wird auf einem Amazon EC2-Server deployed. EC2 stellt eine skalierbare Cloud-Infrastruktur für den produktionsnahen Betrieb des Containers bereit.
+
+#### Ticketmaster API
+Diese externe Event-API liefert Eventdaten. Sie wird konsumiert, aber nicht beeinflusst oder erweitert. Andere APIs könnten ebenfalls eingebunden werden.
+
+### Komponenten (Component)
+
+#### Pipeline
+Die Pipeline automatisiert den Build-, Test- und Deploymentprozess. Bei jedem Commit oder Merge kann die Anwendung automatisch gebaut, getestet und auf EC2 ausgerollt werden.
+
+### Ausgeschlossene (Excluded) Elemente
+
+#### Echtzeitverarbeitung
+Der Service arbeitet nicht mit Live-Datenströmen oder Websockets. Daten werden per Anfrage oder geplanten Intervallen abgerufen – keine Echtzeit-Ereignisverarbeitung.
+
+#### Rechtekonzept
+Es wird kein Rollen- oder Berechtigungsmanagement umgesetzt. Alle Anfragen werden als gleichberechtigte Benutzer behandelt – einfache API-Nutzung ohne Benutzerrollen.
+
+#### Produktive Veröffentlichung
+Der Service wird nicht öffentlich zugänglich gemacht oder als dauerhaft produktiv betrieben. Die Veröffentlichung dient nur zu Demonstrations- und Evaluierungszwecken.
+
+#### Support
+Es wird kein laufender Benutzersupport oder operativer Betrieb vorgesehen. Fokus liegt auf technischer Umsetzung und Nachweis der Funktionalität.
+
+#### Eigenentwicklung von Eventdaten
+Es werden keine eigenen Eventdaten gepflegt oder manuell eingegeben. Alle Eventinformationen stammen ausschließlich aus der angebundenen Drittanbieter-API.
+
 
 # Planen
 
