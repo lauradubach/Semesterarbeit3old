@@ -133,19 +133,19 @@ Der Einsatz moderner Technologien wie Docker, REST-APIs und Cloud-Deployment sor
 ### Enthaltene (Included) Elemente
 
 #### Userinterface
-Das optionale User Interface dient zur Visualisierung oder Testung der API-Endpunkte. Es kann z. B. als einfache Web-Oberfläche fungieren, die Suchparameter (Ort, Genre, Datum) an das Backend weitergibt.
+Das User Interface dient zur Visualisierung der API-Endpunkte. Es wird als einfache Web-Oberfläche fungieren, die Suchparameter an das Backend weitergibt.
 
 #### Flask
 Das Backend-Framework bildet das zentrale Element des Microservices. Es implementiert die REST-API, verarbeitet Anfragen, leitet sie an die Filterlogik weiter und koordiniert alle internen Prozesse.
 
 #### Datenbank
-Hier werden Benutzerinformationen, z. B. Präferenzen oder Filtereinstellungen, gespeichert. Eine relationale Datenbank (z. B. PostgreSQL) ist über ein ORM wie SQLAlchemy angebunden.
+Hier werden Benutzerinformationen, Präferenzen oder Filtereinstellungen, gespeichert. Eine relationale Datenbank ist über SQLAlchemy angebunden.
 
 #### SQLAlchemy
-Das ORM-Tool vermittelt zwischen Python (Flask) und der relationalen Datenbank. Es ermöglicht eine objektorientierte Datenbankanbindung und erleichtert Datenmanipulation und -abfragen.
+Es ermöglicht eine objektorientierte Datenbankanbindung und erleichtert Datenmanipulation und -abfragen.
 
 #### Docker
-Zur Containerisierung des Services wird Docker eingesetzt. Damit ist der Microservice unabhängig von der Umgebung lauffähig, z. B. lokal oder in der Cloud (AWS EC2).
+Zur Containerisierung des Services wird Docker eingesetzt. Damit ist der Microservice unabhängig von der Umgebung lauffähig, lokal oder in der Cloud (AWS EC2).
 
 #### Git
 Der Code wird versionsverwaltet mit Git. Dies ermöglicht saubere Entwicklungsprozesse, Branching und Pull Requests.
@@ -164,10 +164,10 @@ Die Pipeline automatisiert den Build-, Test- und Deploymentprozess. Bei jedem Co
 ### Ausgeschlossene (Excluded) Elemente
 
 #### Echtzeitverarbeitung
-Der Service arbeitet nicht mit Live-Datenströmen oder Websockets. Daten werden per Anfrage oder geplanten Intervallen abgerufen – keine Echtzeit-Ereignisverarbeitung.
+Der Service arbeitet nicht mit Live-Datenströmen. Daten werden per Anfrage oder geplanten Intervallen abgerufen – keine Echtzeit-Ereignisverarbeitung.
 
 #### Rechtekonzept
-Es wird kein Rollen- oder Berechtigungsmanagement umgesetzt. Alle Anfragen werden als gleichberechtigte Benutzer behandelt – einfache API-Nutzung ohne Benutzerrollen.
+Es wird kein Rollen- oder Berechtigungsmanagement umgesetzt. Alle Anfragen werden als gleichberechtigte Benutzer behandelt einfache API-Nutzung ohne Benutzerrollen.
 
 #### Produktive Veröffentlichung
 Der Service wird nicht öffentlich zugänglich gemacht oder als dauerhaft produktiv betrieben. Die Veröffentlichung dient nur zu Demonstrations- und Evaluierungszwecken.

@@ -35,6 +35,7 @@ In diesem Kapitel wird ins Thema der Arbeit eingeführt. Es beschreibt den Hinte
 | 1.2 | 08.05.2025 | Laura Dubach | Thema Initialierung schreiben |
 | 1.3 | 09.05.2025 | Laura Dubach | Sprint Review schreiben |
 | 1.4 | 13.05.2025 | Laura Dubach | Seusag starten & API Auswahl dokumentieren |
+| 1.5 | 14.05.2025 | Laura Dubach | Seusag fertgstellen |
 
 # Aufgabenstellung
 
