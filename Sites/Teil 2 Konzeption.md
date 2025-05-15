@@ -41,10 +41,13 @@ Nun gehen wir ins Thema Konzeption über. In diesem Kapitel wird das ganze Proje
   - [Ist und Soll](#ist-und-soll)
   - [Implementierungsplan](#implementierungsplan)
 - [Entscheiden](#entscheiden)
-  - [Systemarchitektur](#systemarchitektur)
   - [Technologieentscheidungen](#technologieentscheidungen)
+    - [Warum Docker?](#warum-docker)
+    - [Warum AWS?](#warum-aws)
+    - [Datenbank (MariaDB vs. MySQL)](#datenbank-mariadb-vs-mysql)
+      - [Vergleich: MariaDB vs. MySQL](#vergleich-mariadb-vs-mysql)
+      - [Entscheidungsmatrix](#entscheidungsmatrix)
   - [API-Auswahl](#api-auswahl)
-  - [Entscheidungsmatrix](#entscheidungsmatrix)
 
 
 # Informieren
@@ -178,7 +181,6 @@ Es wird kein laufender Benutzersupport oder operativer Betrieb vorgesehen. Fokus
 #### Eigenentwicklung von Eventdaten
 Es werden keine eigenen Eventdaten gepflegt oder manuell eingegeben. Alle Eventinformationen stammen ausschließlich aus der angebundenen Drittanbieter-API.
 
-
 # Planen
 
 Hier werde ich das ganze Projekt planen. Es wird ein Zeitplan erstellt, wann welche Tätigkeiten fällig sind und die Meilensteine sind genau beschrieben.
@@ -210,14 +212,57 @@ Das Projekt wird formal beendet. Es finden eine Abnahme, eine Übergabe an den B
 
 # Entscheiden
 
-## Systemarchitektur
-
-- Microservice-Architektur
-- Datenfluss (z. B. von externer API zur DB)
-
 ## Technologieentscheidungen
 
-- Warum Docker? Warum AWS? Warum bestimmte DB?
+### Warum Docker?
+
+Docker ermöglicht es, den entwickelten Microservice in einem standardisierten Container-Format bereitzustellen. Dadurch ist sichergestellt, dass die Anwendung in verschiedenen Umgebungen – lokal, in der Cloud oder auf CI/CD-Systemen – zuverlässig und konsistent läuft.
+Für dieses Projekt bedeutet das: Der Service lässt sich leicht testen, in Pipelines integrieren und auf verschiedenen Systemen ausrollen, ohne dass lokale Abhängigkeiten berücksichtigt werden müssen.
+
+### Warum AWS?
+
+AWS bietet eine skalierbare und zuverlässige Cloud-Infrastruktur, die sich gut für die Bereitstellung von Microservices eignet.
+In Bezug auf dieses Projekt: AWS erlaubt es, die Anwendung realitätsnah bereitzustellen. Inklusive automatischer Skalierung, Ausfallsicherheit und Integration in bestehende CI/CD-Pipelines. Außerdem ist AWS im professionellen Umfeld weit verbreitet, was die Lösung zukunftsfähig und praxisnah macht.
+
+### Datenbank (MariaDB vs. MySQL)
+
+Für meinen Microservice zur ortsbezogenen Event-Empfehlung für Musikfans ist die Auswahl der geeigneten relationalen Datenbank entscheidend. Zur Auswahl stehen **MariaDB** und **MySQL**. Beide sind SQL-basierte Systeme mit ähnlichem Ursprung, unterscheiden sich aber in Lizenzierung, Kompatibilität, Performance und Integration in moderne Cloud-Umgebungen.
+
+#### Vergleich: MariaDB vs. MySQL
+
+| Kriterium                    | MariaDB                                           | MySQL                                            |
+|------------------------------|-------------------------------------------------- |--------------------------------------------------|
+| **Lizenzierung**             | Open Source (GPL)                                 | Oracle-eigen (Open Core-Modell)                  |
+| **Kompatibilität mit MySQL** | Hoch (Drop-in Replacement für MySQL 5.7)          | Originalsystem                                   |
+| **Performance**              | Besser bei bestimmten Abfragen (z. B. JOINs, CTEs)| Stabil, aber tendenziell konservativer           |
+| **Funktionen**               | Mehr Storage Engines (z. B. Aria, ColumnStore)    | Fokus auf Standardfeatures, v. a. InnoDB         |
+| **Zukunftssicherheit**       | Open-Source-getrieben, langsameres Adoptionstempo | Wird von Oracle aktiv weiterentwickelt           |
+| **Community**                | Community-getrieben, engagiert                    | Starke Community, viele Ressourcen verfügbar     |
+| **SQLAlchemy-Unterstützung** | Gut, gelegentlich kleinere Inkompatibilitäten     | Sehr gut und stabil                              |
+| **AWS-Kompatibilität**       | Möglich über RDS (MariaDB wird unterstützt)       | Bessere Integration (Amazon RDS, Aurora MySQL)   |
+| **Release-Frequenz**         | Häufiger, mehr neue Features                      | Stabiler, konservativer Release-Zyklus           |
+| **Stabilität für Produktion**| Sehr gut                                          | Sehr gut                                         |
+
+#### Entscheidungsmatrix
+
+| Kriterium                 | Gewichtung (1–5) | MariaDB (1–5)  | MySQL (1–5)  | MariaDB × G  | MySQL × G |
+|-------------------------  |------------------|----------------|--------------|--------------|-----------|
+| Kompatibilität SQLAlchemy | 5                | 4              | 5            | 20           | 25        |
+| AWS-Integration           | 5                | 4              | 5            | 20           | 25        |
+| Open Source / Lizenz      | 3                | 5              | 3            | 15           | 9         |
+| Performance & Features    | 3                | 4              | 3            | 12           | 9         |
+| Community / Support       | 2                | 4              | 5            | 8            | 10        |
+| Stabilität                | 4                | 4              | 5            | 16           | 20        |
+| **Gesamt**                |                  |                |              | **91**       | **98**    |
+
+MySQL ist die passendere Wahl für dieses Projekt, weil:
+
+- Es eine bessere Integration in AWS bietet.
+- Die Kompatibilität mit SQLAlchemy ist stabiler und erprobt.
+- MySQL ist ein etablierter Standard und in produktiven Umgebungen weit verbreitet.
+- Für einen stabilen, realitätsnahen Microservice mit REST-API ist MySQL eine sichere und zukunftssichere Wahl.
+
+> (Chat GPT) [Quelle](https://chatgpt.com/share/6825edd5-4508-800e-9e48-337a47b9a07e)
 
 ## API-Auswahl
 
@@ -239,8 +284,6 @@ Im Vergleich standen unter anderem die Ticketmaster API und die Eventbrite API. 
 Auf Basis dieser Analyse fiel die Entscheidung zugunsten der Ticketmaster API, da sie besser zu den Projektanforderungen in Bezug auf Datenqualität, Eventkategorien und internationale Verfügbarkeit passt.
 
 > (Chat GPT) [Quelle](https://chatgpt.com/share/681cb603-08cc-800e-aab1-fdd14d015179)
-
-## Entscheidungsmatrix
 
 
 > Back [Page](https://github.com/lauradubach/Semesterarbeit3/blob/main/Sites/Teil%202%20Konzeption.md)

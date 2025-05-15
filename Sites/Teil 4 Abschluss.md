@@ -23,8 +23,10 @@ Kapitel Informieren, Site Konzeption
 Chat GPT. (2025): kannst du mir einen text schreiben wieso ich mich für SCRUM entschieden habe. Aufgerufen am: 13.05.2025. Online unter: https://chatgpt.com/share/68230b9b-2d9c-800e-a1eb-64bd9fe8ed96
 
 Kapitel Entscheiden, Site Konzeption
-Chat GPT. (2025): kannst du mir hierzu einen text schreiben: Event API Recherche & Anbindung Vorbereiten. Aufgerufen am: 08.05.2025. Online unter:
-https://chatgpt.com/share/681cb603-08cc-800e-aab1-fdd14d015179
+Chat GPT. (2025): kannst du mit die vor und nachteile angeben und dann eine entscheidungsmatrix generieren? was zu meiner arbeit passt natürlich. Aufgerufen am: 15.05.25. Online unter: https://chatgpt.com/share/6825edd5-4508-800e-9e48-337a47b9a07e
+
+Kapitel Entscheiden, Site Konzeption
+Chat GPT. (2025): kannst du mir hierzu einen text schreiben: Event API Recherche & Anbindung Vorbereiten. Aufgerufen am: 08.05.2025. Online unter: https://chatgpt.com/share/681cb603-08cc-800e-aab1-fdd14d015179
 
 
 > Back [Page](https://github.com/lauradubach/Semesterarbeit3/blob/main/Sites/Teil%203%20Realisierung.md)
