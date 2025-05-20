@@ -37,6 +37,8 @@ In diesem Kapitel wird ins Thema der Arbeit eingeführt. Es beschreibt den Hinte
 | 1.4 | 13.05.2025 | Laura Dubach | Seusag starten & API Auswahl dokumentieren |
 | 1.5 | 14.05.2025 | Laura Dubach | Seusag fertgstellen |
 | 1.6 | 15.05.2025 | Laura Dubach | Abschnitt Entscheiden dokumentieren |
+| 1.7 | 19.05.2025 | Laura Dubach | Ist & Soll, Implementierungsplan und Risikomatrix erstellen |
+| 1.8 | 20.05.2025 | Laura Dubach | Ist & Soll, Implementierungsplan und Risikomatrix erstellen dokumentieren |
 
 # Aufgabenstellung
 

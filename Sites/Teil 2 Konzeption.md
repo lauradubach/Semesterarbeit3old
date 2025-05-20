@@ -39,6 +39,13 @@ Nun gehen wir ins Thema Konzeption über. In diesem Kapitel wird das ganze Proje
     - [Realisieren](#realisieren)
     - [Abschluss](#abschluss)
   - [Ist und Soll](#ist-und-soll)
+    - [Ist Zustand](#ist-zustand)
+    - [Soll Zustand](#soll-zustand)
+  - [Risikomatrix](#risikomatrix)
+    - [Technische Risiken](#technische-risiken)
+    - [Organisatorische Risiken](#organisatorische-risiken)
+    - [Sicherheitsrisiken](#sicherheitsrisiken)
+    - [Abhängigkeiten und externe Faktoren](#abhängigkeiten-und-externe-faktoren)
   - [Implementierungsplan](#implementierungsplan)
 - [Entscheiden](#entscheiden)
   - [Technologieentscheidungen](#technologieentscheidungen)
@@ -208,7 +215,58 @@ Das Projekt wird formal beendet. Es finden eine Abnahme, eine Übergabe an den B
 
 ## Ist und Soll
 
+![Ist&Soll](../Pictures/Ist&Soll.png)
+
+### Ist Zustand
+
+Aktuell existiert kein spezialisierter Service zur personalisierten, ortsbezogenen Event-Empfehlung für Musikfans. Zwar gibt es verschiedene Plattformen mit Eventdaten, jedoch fehlt eine flexible, erweiterbare Lösung mit integrierter Nutzerlogik, Filterfunktionen und einfacher API-Anbindung. Eine Cloud-Deployment-Strategie sowie automatisierte Containerbereitstellung und Nutzerdatenhaltung sind ebenfalls noch nicht vorhanden.
+
+### Soll Zustand
+
+Ziel ist die Entwicklung eines eigenständigen Microservices, der Musikveranstaltungen über eine REST-API verfügbar macht. Der Service soll externe Event-APIs anbinden, Daten filtern und personalisieren können sowie Nutzerdaten in einer angebundenen Datenbank verwalten. Die Bereitstellung erfolgt containerisiert via Docker und automatisiert über eine Deployment-Pipeline auf AWS. Der Service soll modular, wartbar und sicher konzipiert sein.
+
+## Risikomatrix
+
+![Risikomatrix](../Pictures/Risikomatrix.png)
+
+### Technische Risiken
+
+| Risiko | Eintritt | Auswirkung | Risikobewertung (Matrixfeld) | Gegenmaßnahmen |
+|--------|----------|------------|-------------------------------|----------------|
+| Externe API nicht erreichbar oder ändert sich | Mittel | Hoch | **High: 12** | Fallback-Strategie, Fehlerbehandlung, API-Abstraktion, regelmäßige Tests |
+| Fehlkonfiguration von Docker/Deployment | Mittel | Mittel-Hoch | **High: 8** | Tests in dev/staging-Umgebung, automatisiertes Deployment, Logging |
+| Performanceprobleme bei vielen API-Abfragen | Niedrig-Mittel | Mittel | **Medium: 5** | Caching einführen, Limitierung von Abfragen, asynchrone Verarbeitung |
+
+### Organisatorische Risiken
+
+| Risiko | Eintritt | Auswirkung | Risikobewertung (Matrixfeld) | Gegenmaßnahmen |
+|--------|----------|------------|-------------------------------|----------------|
+| Zeitüberschreitung | Mittel | Hoch | **High: 11** | Agile Planung (z. B. Sprints), MVP-Fokus, Priorisierung |
+| Unklare Anforderungen | Mittel | Mittel | **Medium: 5** | Lasten-/Pflichtenheft erstellen, regelmäßige Reviews |
+| Fehlende Dokumentation | Hoch | Mittel | **High: 7** | Kontinuierliche Dokumentation, klare Kommentare, README aktuell halten |
+
+### Sicherheitsrisiken
+
+| Risiko | Eintritt | Auswirkung | Risikobewertung (Matrixfeld) | Gegenmaßnahmen |
+|--------|----------|------------|-------------------------------|----------------|
+| Unzureichender Schutz der Nutzerinformationen | Niedrig-Mittel | Hoch | **High: 11** | Einsatz sicherer Verbindung (HTTPS), DB-Zugriffsrechte einschränken, Validierung und Verschlüsselung |
+| API Key-Leakage | Mittel | Hoch | **High: 11** | `.env`-Dateien nutzen, `.gitignore`, Secrets nie im Klartext speichern |
+
+### Abhängigkeiten und externe Faktoren
+
+| Risiko | Eintritt | Auswirkung | Risikobewertung (Matrixfeld) | Gegenmaßnahmen |
+|--------|----------|------------|-------------------------------|----------------|
+| Änderungen an externen APIs | Mittel | Mittel-Hoch | **High: 8** | Nutzung von API-Wrappers, API-Versionierung beachten, Monitoring der Schnittstellen |
+| Cloud-Service-Probleme (z. B. AWS) | Niedrig | Mittel | **Medium: 4** | Monitoring einrichten, regelmäßige Backups, alternative Deploymentmöglichkeit vorbereiten |
+
+
 ## Implementierungsplan
+
+Hier wird grob dargestellt, wie in diesem Projekt vorgegangen wird.
+
+![Implementierungsplan](../Pictures/Implementierungsplan.png)
+
+Der Implementierungsplan für den Event-Microservice zeigt die sieben Hauptschritte, die für die erfolgreiche Umsetzung notwendig sind. Jeder dieser Schritte ist essenziell für das Gesamtprodukt kein Schritt kann ausgelassen werden, da sie aufeinander aufbauen und zusammen die Funktionsfähigkeit, Sicherheit und Wartbarkeit des Systems gewährleisten.
 
 # Entscheiden
 
