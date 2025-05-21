@@ -142,7 +142,7 @@ Der Einsatz moderner Technologien wie Docker, REST-APIs und Cloud-Deployment sor
 
 ### Enthaltene Elemente (Included)
 
-*Userinterface*
+**Userinterface**
 Das User Interface dient zur Visualisierung der API-Endpunkte. Es wird als einfache Web-Oberfläche fungieren, die Suchparameter an das Backend weitergibt.
 
 #### Flask
