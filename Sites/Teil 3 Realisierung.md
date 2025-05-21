@@ -22,8 +22,6 @@
 
 # Realisieren
 
-- Umsetzung pro Sprint
-- Was wurde im jeweiligen Sprint geplant und erreicht?
 - Features, die umgesetzt wurden
 - Herausforderungen & Lösungen
 - REST-API Endpoints
