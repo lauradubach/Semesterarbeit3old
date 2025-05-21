@@ -14,18 +14,18 @@ Nun gehen wir ins Thema Konzeption über. In diesem Kapitel wird das ganze Proje
   - [Anforderungen erheben](#anforderungen-erheben)
   - [Relevanz und Nutzen eines Event-Finders](#relevanz-und-nutzen-eines-event-finders)
   - [Seusag](#seusag)
-    - [Enthaltene (Included) Elemente](#enthaltene-included-elemente)
-      - [Userinterface](#userinterface)
+    - [Enthaltene Elemente (Included)](#enthaltene-elemente-included)
       - [Flask](#flask)
       - [Datenbank](#datenbank)
       - [SQLAlchemy](#sqlalchemy)
       - [Docker](#docker)
       - [Git](#git)
+    - [Externes System](#externes-system)
       - [EC2 (AWS)](#ec2-aws)
       - [Ticketmaster API](#ticketmaster-api)
     - [Komponenten (Component)](#komponenten-component)
       - [Pipeline](#pipeline)
-    - [Ausgeschlossene (Excluded) Elemente](#ausgeschlossene-excluded-elemente)
+    - [Ausgeschlossene Elemente (Excluded)](#ausgeschlossene-elemente-excluded)
       - [Echtzeitverarbeitung](#echtzeitverarbeitung)
       - [Rechtekonzept](#rechtekonzept)
       - [Produktive Veröffentlichung](#produktive-veröffentlichung)
@@ -140,9 +140,9 @@ Der Einsatz moderner Technologien wie Docker, REST-APIs und Cloud-Deployment sor
 
 ![SEUSAG](../Pictures/SEUSAG.png)
 
-### Enthaltene (Included) Elemente
+### Enthaltene Elemente (Included)
 
-#### Userinterface
+*Userinterface*
 Das User Interface dient zur Visualisierung der API-Endpunkte. Es wird als einfache Web-Oberfläche fungieren, die Suchparameter an das Backend weitergibt.
 
 #### Flask
@@ -160,6 +160,8 @@ Zur Containerisierung des Services wird Docker eingesetzt. Damit ist der Microse
 #### Git
 Der Code wird versionsverwaltet mit Git. Dies ermöglicht saubere Entwicklungsprozesse, Branching und Pull Requests.
 
+### Externes System
+
 #### EC2 (AWS)
 Der Microservice wird auf einem Amazon EC2-Server deployed. EC2 stellt eine skalierbare Cloud-Infrastruktur für den produktionsnahen Betrieb des Containers bereit.
 
@@ -171,7 +173,7 @@ Diese externe Event-API liefert Eventdaten. Sie wird konsumiert, aber nicht beei
 #### Pipeline
 Die Pipeline automatisiert den Build-, Test- und Deploymentprozess. Bei jedem Commit oder Merge kann die Anwendung automatisch gebaut, getestet und auf EC2 ausgerollt werden.
 
-### Ausgeschlossene (Excluded) Elemente
+### Ausgeschlossene Elemente (Excluded)
 
 #### Echtzeitverarbeitung
 Der Service arbeitet nicht mit Live-Datenströmen. Daten werden per Anfrage oder geplanten Intervallen abgerufen – keine Echtzeit-Ereignisverarbeitung.
