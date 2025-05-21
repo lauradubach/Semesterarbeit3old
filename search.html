@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Globale Suche</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f8f8f8;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+    }
+    ul#results {
+      list-style: none;
+      padding: 0;
+    }
+    ul#results li {
+      margin-bottom: 1rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    ul#results li a {
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: bold;
+    }
+    ul#results li p {
+      margin: 0.5rem 0 0;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 Globale Suche</h1>
+  <input type="text" id="searchBox" placeholder="Suchbegriff eingeben…" />
+  <ul id="results"></ul>
+
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
+  <script>
+    let idx, pages = [];
+
+    fetch('search-index.json')
+      .then(response => response.json())
+      .then(data => {
+        pages = data;
+        idx = lunr(function () {
+          this.ref('url');
+          this.field('title');
+          this.field('content');
+
+          pages.forEach(function (doc) {
+            this.add(doc);
+          }, this);
+        });
+      });
+
+    document.getElementById('searchBox').addEventListener('input', function () {
+      const query = this.value.trim();
+      const results = idx.search(query);
+      const list = document.getElementById('results');
+      list.innerHTML = '';
+
+      if (!query) return;
+
+      results.forEach(result => {
+        const page = pages.find(p => p.url === result.ref);
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <a href="${page.url}">${page.title}</a>
+          <p>${page.content.slice(0, 200)}...</p>
+        `;
+        list.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>
